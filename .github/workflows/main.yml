@@ -1,14 +1,18 @@
 name: Cloud Build
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: # Allows manual or programmatic triggering
 
 jobs:
   build:
     runs-on: ubuntu-latest # Use GitHub-hosted runner
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3 # Fetches repository code
 
       - name: Execute CI Pipeline Logic
-        run: dotnet run --project ./ci-program/CIProgram.csproj
+        run: dotnet run --project ./CIProgram/CIProgram.csproj
