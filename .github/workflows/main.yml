@@ -13,6 +13,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3 # Fetches repository code
+        
+      - name: Verify Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -al
+
+      - name: Verify .NET Installation
+        run: dotnet --info
 
       - name: Execute CI Pipeline Logic
         run: dotnet run --project ./CIProgram/CIProgram.csproj
