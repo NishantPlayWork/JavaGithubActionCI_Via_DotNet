@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World! using Self Hosted Runner 1-- yay" );
+        System.out.println( "Hello World! using Github Hosted Runner 1-- yay" );
     }
 }
